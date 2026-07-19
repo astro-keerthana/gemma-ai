@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tc_01_emergency_en",
+    "input": "I have severe chest pain and can't breathe properly since 20 minutes",
+    "expected_tier": "EMERGENCY",
+    "notes": "Hard rule match: chest pain + breathing difficulty"
+  },
+  {
+    "id": "tc_02_emergency_hindi",
+    "input": "Mere seene mein dard hai aur saans nahi aa rahi",
+    "expected_tier": "EMERGENCY",
+    "notes": "Same as tc_01 but Romanized Hindi, tests multilingual rule matching"
+  },
+  {
+    "id": "tc_03_urgent_fever",
+    "input": "Bachche ko 3 din se tez bukhar hai, khana nahi kha raha",
+    "expected_tier": "URGENT",
+    "notes": "Prolonged high fever in a child, no hard danger sign"
+  },
+  {
+    "id": "tc_04_self_care",
+    "input": "I have a mild headache since this morning, otherwise feeling fine",
+    "expected_tier": "SELF_CARE",
+    "notes": "Should NOT escalate; tests over-triage false positive rate"
+  },
+  {
+    "id": "tc_05_needs_more_info",
+    "input": "I don't feel well",
+    "expected_tier": "NEEDS_MORE_INFO",
+    "notes": "Deliberately vague -- tests the follow-up question loop"
+  },
+  {
+    "id": "tc_06_stroke_signs",
+    "input": "Papa ka chehra achanak ek taraf se tedha ho gaya aur baat karne mein dikkat ho rahi hai",
+    "expected_tier": "EMERGENCY",
+    "notes": "Stroke FACE-droop + slurred speech pattern, Hindi"
+  }
+]
